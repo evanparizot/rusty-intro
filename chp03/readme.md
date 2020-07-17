@@ -134,3 +134,30 @@ fn main() {
 ```
 
 ##### Array Type
+- All elements in an array must be of same type
+- Fixed length
+
+```rust
+let a = [1, 2, 3, 4, 5];
+```
+
+- Useful for when wanting data allocated on the stack rather than the heap
+- Useful for ensuring fixed number of elements (alternative would be a vector (array list or dynamic array or list))
+
+```rust
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+// i32 is type of each element
+// ;5 indicates array contains 5 elements
+
+let b = [3; 5];
+let b = [3, 3, 3, 3, 3];
+// These are the same
+
+println!("First element in array: {}", b[0]);
+
+```
+- Rust will _panic_ when attempting to access an invalid index
+
+
+### 3.3 Functions
+

@@ -11,7 +11,7 @@ This repository is an introduction run through of Rust. It just follows the [Rus
 2. Programming a Guessing Game `Done`
 3. Common Programming Concepts
     1. Variables and Mutability `Done`
-    2. Data Types
+    2. Data Types `Done`
     3. Functions
     4. Comments
     5. Control Flow
