@@ -160,4 +160,177 @@ println!("First element in array: {}", b[0]);
 
 
 ### 3.3 Functions
+- Functions are defined with `snake_casing` by convention
+- Start with the keyword `fn`
 
+```rust
+fn main() {
+    println!("Hello world");
+    another_function();
+}
+
+fn another_function() {
+    println!("Hello world, again");
+}
+```
+
+#### Function Parameters
+```rust
+fn main() {
+    function(4);
+}
+
+fn function(x: i32) {
+    println!("The value of x is : {}", x);
+}
+```
+
+#### Function Bodies Contain Statements and Expressions
+- Creating a variable and assigning a value to it with the `let` keyword is a **statement**
+```rust
+fn main() {
+    let y = 5;
+}
+```
+- Function definitions are also statements. **Statements** do not return values; can't assign a `let` statement to another variable
+- **Expressions** evaluate to something. 
+    - Can be part of statements
+    - Expressions do not include ending semicolons (adding one turns it into a statement)
+
+```rust
+fn main() {
+    let x = 5;
+
+    let y = {
+        let x = 3;
+        x + 1 // expression
+    };
+
+    println!("The value of y is: {}", y); // 4
+}
+```
+
+#### Functions with Return Values
+- Most functions return the last expression implicitly
+```rust
+fn five() -> i32 {
+    5 // this is an expression (returns something)
+}
+
+fn invalidfive() -> i32 {
+    5; // this is a statement (does not return something)
+}
+
+fn altfive() -> i32 {
+    return 5;
+}
+
+fn main() {
+    let x = five();
+
+    println!("The vale of x is : {}", x);
+}
+```
+
+### 3.4 Comments
+- Use double slashes
+- No block comments
+
+### 3.5 Control Flow
+#### if Expressions
+- `if`'s are expressions
+
+```rust
+fn main() {
+    let num = 3;
+
+    if num < 5 {
+        println!("Was less that 5");
+    } else {
+        println!("Was greater than 5 or was 5");
+    }
+}
+```
+- With ifs, conditionals must evalutate to a bool. It won't convert non-boolean types
+
+#### Handling Multiple Conditions with else if
+```rust
+fn main() {
+    let num = 5;
+    if num % 4 == 0 {
+        println!("Divisible by 4");
+    } else if num % 3 == 0 {
+        println!("Divisible by 3");
+    } else if num % 2 == 0 {
+        println!("Divisible by 2");
+    } else {
+        println!("What are you doing?");
+    }
+}
+```
+
+#### Using if in a let Statement
+```rust
+fn main() {
+    let condition = true;
+    let number = if condition { 5 } else { 6] };
+
+    println!("The value of number is : {}", number); // 5
+}
+```
+
+#### Repetition with Loops
+##### Repeating code with loop
+- Can terminate program with either `break` keyword or external interrupt
+```rust
+fn main() {
+    loop {
+        println!("Infinite loop");
+    }
+}
+```
+##### Returning values from loops
+```rust
+fn main() {
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+}
+```
+
+##### Conditional Loops with while
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{}", number);
+        number -= 1;
+    }
+
+    println!("done");
+}
+```
+
+##### Looping through a collection with for
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for e in a.iter() {
+        println!("Currently on {}", e);
+    }
+}
+
+fn alt() {
+    for n in (1..4).rev() {
+        println!("{}", n);
+    }
+    println!("Done");
+}
+
+```

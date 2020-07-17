@@ -12,9 +12,9 @@ This repository is an introduction run through of Rust. It just follows the [Rus
 3. Common Programming Concepts
     1. Variables and Mutability `Done`
     2. Data Types `Done`
-    3. Functions
-    4. Comments
-    5. Control Flow
+    3. Functions `Done`
+    4. Comments `Done`
+    5. Control Flow `Done`
 4. Understanding Ownership
     1. What is Ownership?
     2. References and Borrowing
