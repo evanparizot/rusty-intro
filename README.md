@@ -16,9 +16,9 @@ This repository is an introduction run through of Rust. It just follows the [Rus
     4. Comments `Done`
     5. Control Flow `Done`
 4. Understanding Ownership
-    1. What is Ownership?
-    2. References and Borrowing
-    3. The Slice Type
+    1. What is Ownership? `Done`
+    2. References and Borrowing `Done`
+    3. The Slice Type `Done`
 5. Using Structs to Structure Related Data
     1. Defining and Instantiating Structs
     2. An Example Program Using Structs
