@@ -20,13 +20,13 @@ This repository is an introduction run through of Rust. It just follows the [Rus
     2. References and Borrowing `Done`
     3. The Slice Type `Done`
 5. Using Structs to Structure Related Data
-    1. Defining and Instantiating Structs
-    2. An Example Program Using Structs
-    3. Method Syntax
+    1. Defining and Instantiating Structs `Done`
+    2. An Example Program Using Structs `Done`
+    3. Method Syntax `Done`
 6. Enums and Pattern Matching
-    1. Defining an Enum
-    2. The match Control Flow Operator
-    3. Concise Control Flow with if let
+    1. Defining an Enum `Done`
+    2. The match Control Flow Operator `Done`
+    3. Concise Control Flow with if let `Done`
 7. Managing Growing Projects with Packages, Crates, and Modules
     1. Packages and Crates
     2. Definiing Modules to Control Scope and Privacy
