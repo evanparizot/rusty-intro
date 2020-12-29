@@ -6,6 +6,7 @@ fn main() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
+
     // `rand::thread_rng()`
     // gives particular numb gen; local to the current thread of execution and seeded by OS
 
@@ -13,7 +14,7 @@ fn main() {
 
     loop {
         println!("Please input your guess");
-    
+
         let mut guess = String::new();
         
         // Variables are immutable by default
@@ -21,9 +22,7 @@ fn main() {
     
         // ::new
         // associated function (static method)
-    
-        
-        
+
         io::stdin()
             .read_line(&mut guess) // & -> reference (immutable by default (see chp 4))
             .expect("Failed to read line");
@@ -36,7 +35,8 @@ fn main() {
         };
     
         println!("You guessed: {}", guess);
-    
+
+
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Smaller"),
             Ordering::Greater => println!("Bigger"),

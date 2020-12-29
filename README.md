@@ -28,13 +28,13 @@ This repository is an introduction run through of Rust. It just follows the [Rus
     2. The match Control Flow Operator `Done`
     3. Concise Control Flow with if let `Done`
 7. Managing Growing Projects with Packages, Crates, and Modules
-    1. Packages and Crates
-    2. Definiing Modules to Control Scope and Privacy
-    3. Paths for Referring to an item in the Module Tree
-    4. Bringing Paths into Scope with the use Keyword
-    5. Separating Modules into Different Files
+    1. Packages and Crates `Done`
+    2. Definiing Modules to Control Scope and Privacy `Done`
+    3. Paths for Referring to an item in the Module Tree `Done`
+    4. Bringing Paths into Scope with the use Keyword `Done`
+    5. Separating Modules into Different Files `Done`
 8. Common Collections
-    1. Storing Lists of Values with Vectors
+    1. Storing Lists of Values with Vectors `Done`
     2. Storing UTF-8 Encoded Text with Strings
     3. Storing Keys with Associated Values in Hash Maps
 9. Error Handling
