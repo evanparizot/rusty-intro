@@ -26,7 +26,7 @@
 - Other than string literals (which are immutable), there exists a second type `String`
 - This type is allocated on the heap
 ```rust
-let s = String::from("hello");  // s => hello
+let mut s = String::from("hello");  // s => hello
 s.push_str(", world");          // s => hello, world
 ```
 
