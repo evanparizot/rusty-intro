@@ -78,3 +78,50 @@ as well as closures that capture nothing from their environment
 
 
 ## 13.2 Processing a series of items with iterators
+- Iterators in rust are lazy, meaning that methods need to consume an iterator for it to do something
+
+```rust
+let v1 = vec![1, 2, 3];
+let v1_iterator = v1.iter();
+for v in v1_iterator {
+    println!("Got: {}", v);
+}
+```
+
+### The iterator trait and the next method
+- All iterators implement the `Iterator` trait
+- Calling `next()` on an iterator uses it up, requiring mutability or ownership
+
+### Methods that Consume the Iterator
+- Methods that call `next` are _consuming adaptors_ (calling them uses up the iterator)
+
+```rust
+#[test]
+fn iterator_sum() {
+    let v1 = vec![1,2,3];
+    let v1_iter = v1.iter();
+    let total: i32 = v1_iter.sum();
+    assert_eq!(total, 6);
+}
+```
+
+### Methods that Produce other Iterators
+- _Iterator Adaptors_ are methods defined on the `Iterator` trait that don't consume the iterator; they produce different ierators by changing aspects of the original iterator
+
+```rust
+let v1: Vec<i32> = vec![1,2,3];
+let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();
+assert_eq!(v2, vec![2,3,4]);
+```
+
+### Using closures that Capture their environment
+- Many iterator adapters take closures as arguments
+- The `filter` method is one such example
+
+```rust
+fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
+    shoes.into_iter().filter(|s| s.size == shoe_size).collect()
+}
+```
+
+## 13.3 Improving our I/O Project
